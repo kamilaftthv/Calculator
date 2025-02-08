@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Calculator"
         mc:Ignorable="d"
-        Title="Calculator" Height="600" Width="400"
+        Title="Calculator" Height="500" Width="500"
         Background="White">
     <Window.Resources>
         <Style x:Key="NumberButtonStyle" TargetType="Button">
@@ -70,10 +70,10 @@
                 <RowDefinition/>
                 <RowDefinition/>
                 <RowDefinition/>
-                <RowDefinition/>
-                <RowDefinition/>
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
+                <ColumnDefinition/>
+                <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
                 <ColumnDefinition/>
@@ -95,21 +95,23 @@
             <Button Content="3" Grid.Row="2" Grid.Column="2" Click="Number_Click" Style="{StaticResource NumberButtonStyle}"/>
             <Button Content="-" Grid.Row="2" Grid.Column="3" Click="Operation_Click" Style="{StaticResource OperationButtonStyle}"/>
 
-            <Button Content="0" Grid.Row="3" Grid.Column="0" Grid.ColumnSpan="2" Click="Number_Click" Style="{StaticResource NumberButtonStyle}"/>
+            <Button Content="0" Grid.Row="3" Grid.Column="0" Click="Number_Click" Style="{StaticResource NumberButtonStyle}"/>
+            <Button Content="," Grid.Row="3" Grid.Column="1" Click="Comma_Click" Style="{StaticResource NumberButtonStyle}" Background="#FF80DEEA"/>
             <Button Content="C" Grid.Row="3" Grid.Column="2" Click="Clear_Click" Style="{StaticResource OperationButtonStyle}"/>
             <Button Content="+" Grid.Row="3" Grid.Column="3" Click="Operation_Click" Style="{StaticResource OperationButtonStyle}"/>
 
-            <Button Content="=" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="4" Click="Equals_Click" Style="{StaticResource EqualsButtonStyle}"/>
-            
-            <Button Content="sin" Grid.Row="5" Grid.Column="0" Click="Trigonometric_Click" Style="{StaticResource TrigonometricButtonStyle}"/>
-            <Button Content="cos" Grid.Row="5" Grid.Column="1" Click="Trigonometric_Click" Style="{StaticResource TrigonometricButtonStyle}"/>
-            <Button Content="tg" Grid.Row="5" Grid.Column="2" Click="Trigonometric_Click" Style="{StaticResource TrigonometricButtonStyle}"/>
-            <Button Content="ctg" Grid.Row="5" Grid.Column="3" Click="Trigonometric_Click" Style="{StaticResource TrigonometricButtonStyle}"/>
-            
-            <Button Content="arcsin" Grid.Row="6" Grid.Column="0" Click="InverseTrigonometric_Click" Style="{StaticResource TrigonometricButtonStyle}"/>
-            <Button Content="arccos" Grid.Row="6" Grid.Column="1" Click="InverseTrigonometric_Click" Style="{StaticResource TrigonometricButtonStyle}"/>
-            <Button Content="arctg" Grid.Row="6" Grid.Column="2" Click="InverseTrigonometric_Click" Style="{StaticResource TrigonometricButtonStyle}"/>
-            <Button Content="arcctg" Grid.Row="6" Grid.Column="3" Click="InverseTrigonometric_Click" Style="{StaticResource TrigonometricButtonStyle}"/>
+            <Button Content="=" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="6" Click="Equals_Click" Style="{StaticResource EqualsButtonStyle}"/>
+
+            <!-- Тригонометрические функции в пятой и шестой колонках -->
+            <Button Content="sin" Grid.Row="0" Grid.Column="4" Click="Trigonometric_Click" Style="{StaticResource TrigonometricButtonStyle}"/>
+            <Button Content="cos" Grid.Row="0" Grid.Column="5" Click="Trigonometric_Click" Style="{StaticResource TrigonometricButtonStyle}"/>
+            <Button Content="tg" Grid.Row="1" Grid.Column="4" Click="Trigonometric_Click" Style="{StaticResource TrigonometricButtonStyle}"/>
+            <Button Content="ctg" Grid.Row="1" Grid.Column="5" Click="Trigonometric_Click" Style="{StaticResource TrigonometricButtonStyle}"/>
+
+            <Button Content="arcsin" Grid.Row="2" Grid.Column="4" Click="InverseTrigonometric_Click" Style="{StaticResource TrigonometricButtonStyle}"/>
+            <Button Content="arccos" Grid.Row="2" Grid.Column="5" Click="InverseTrigonometric_Click" Style="{StaticResource TrigonometricButtonStyle}"/>
+            <Button Content="arctg" Grid.Row="3" Grid.Column="4" Click="InverseTrigonometric_Click" Style="{StaticResource TrigonometricButtonStyle}"/>
+            <Button Content="arcctg" Grid.Row="3" Grid.Column="5" Click="InverseTrigonometric_Click" Style="{StaticResource TrigonometricButtonStyle}"/>
         </Grid>
     </Grid>
 </Window>

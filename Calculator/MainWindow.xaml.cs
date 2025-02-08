@@ -134,5 +134,13 @@ namespace Calculator
             txtDisplay.Text = result.ToString();
             isOperationClicked = true;
         }
+
+        private void Comma_Click(object sender, RoutedEventArgs e)
+        {
+            if (!txtDisplay.Text.Contains(",") && !txtDisplay.Text.Contains("."))
+            {
+                txtDisplay.Text += ",";
+            }
+        }
     }
 }
