@@ -102,7 +102,6 @@
 
             <Button Content="=" Grid.Row="4" Grid.Column="0" Grid.ColumnSpan="6" Click="Equals_Click" Style="{StaticResource EqualsButtonStyle}"/>
 
-            <!-- Тригонометрические функции в пятой и шестой колонках -->
             <Button Content="sin" Grid.Row="0" Grid.Column="4" Click="Trigonometric_Click" Style="{StaticResource TrigonometricButtonStyle}"/>
             <Button Content="cos" Grid.Row="0" Grid.Column="5" Click="Trigonometric_Click" Style="{StaticResource TrigonometricButtonStyle}"/>
             <Button Content="tg" Grid.Row="1" Grid.Column="4" Click="Trigonometric_Click" Style="{StaticResource TrigonometricButtonStyle}"/>
